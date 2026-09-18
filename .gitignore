@@ -1,0 +1,72 @@
+# ----------------------------------
+# Terraform local working directory
+# ----------------------------------
+.terraform/
+**/.terraform/*
+
+# ----------------------------------
+# Terraform state - NEVER commit
+# ----------------------------------
+*.tfstate
+*.tfstate.*
+
+# ----------------------------------
+# Local variable files
+# May contain account-specific or sensitive values
+# ----------------------------------
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Allow example variable files
+!*.tfvars.example
+
+# ----------------------------------
+# Terraform plan files
+# ----------------------------------
+*.tfplan
+tfplan
+plan.out
+
+# ----------------------------------
+# Terraform crash files
+# ----------------------------------
+crash.log
+crash.*.log
+
+# ----------------------------------
+# Local override files
+# ----------------------------------
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ----------------------------------
+# Terraform CLI config
+# ----------------------------------
+.terraformrc
+terraform.rc
+
+# ----------------------------------
+# Environment / secret files
+# ----------------------------------
+.env
+.env.*
+!.env.example
+
+# ----------------------------------
+# Private keys / certificates
+# ----------------------------------
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ----------------------------------
+# OS / editor files
+# ----------------------------------
+.DS_Store
+.idea/
+.vscode/
