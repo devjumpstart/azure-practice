@@ -48,7 +48,7 @@ resource "azurerm_linux_virtual_machine" "customer" {
   name                = "vm-${var.customer_name}"
   location            = azurerm_resource_group.customer.location
   resource_group_name = azurerm_resource_group.customer.name
-  size                = "Standard_B2s"
+  size                = var.size
   admin_username      = var.admin_username
 
   network_interface_ids = [

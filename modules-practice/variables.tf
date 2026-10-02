@@ -2,7 +2,7 @@
 variable "location" {
   description = "Azure region for resources"
   type        = string
-  default     = "canadacentral"
+  default     = "eastus2"
 }
 
 variable "vnet_cidr" {
@@ -30,4 +30,10 @@ variable "postgres_admin_password" {
 variable "subscription_id" {
   description = "Azure subscription ID"
   type        = string
+}
+
+variable "size" {
+  description = "Size of the virtual machine"
+  type        = string
+  default     = "Standard_D2s_v7"
 }

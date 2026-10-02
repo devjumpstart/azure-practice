@@ -18,10 +18,11 @@ module "cato" {
   source = "./modules/customer-infrastructure"
 
   customer_name           = "cato"
-  location                = "canadacentral"
+  location                = var.location
   vnet_cidr               = var.vnet_cidr
   ssh_public_key          = file(pathexpand(var.ssh_public_key))
   postgres_admin_password = var.postgres_admin_password
+  size                    = var.size
 }
 
 # Outputs for Customer 1
